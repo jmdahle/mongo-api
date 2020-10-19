@@ -8,7 +8,7 @@ router.get("/api/scores/all", (req, res) => {
   Scores.find({})
     .then(dbScores => {
       console.log("JD, I got the goods.");
-      console.log("Take a look...", dbScores);
+      // console.log("Take a look...", dbScores);
       res.json(dbScores);
     })
     .catch(err => {

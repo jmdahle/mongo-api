@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.9"
@@ -11,6 +12,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "start-dev": "concurrently \"nodemon\" \"npm run client\"",
+    "client": "cd ../react-music && npm run start",
     "seeddb": "node database/seeds.js"
   },
   "keywords": [],

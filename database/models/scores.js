@@ -28,13 +28,13 @@ scoreSchema.virtual("timeSignature")
     // [3,4] is 3/4 time - "waltz"
     // [4,4] is 4/4 time - "common time"
     // https://tonejs.github.io/
-    return [toString(this.beatsPerBar),toString(this.beatUnit)]
+    return [this.beatsPerBar.toString(),this.beatUnit.toString()];
   });
 scoreSchema.virtual("totalMeasures").get(function() {
       // convert numberMeasures to format used in tonejs
       // adding "m", e.g., 10m is 10 measures, individually 0 through 9
       // https://tonejs.github.io/
-      return `${toString(this.numberMeasures)}m`
+      return `${this.numberMeasures.toString()}m`
   });
 
 const Score = mongoose.model("Score", scoreSchema);
