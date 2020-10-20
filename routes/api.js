@@ -31,8 +31,5 @@ router.get("/api/scores/all", (req, res) => {
     });
 });
 
-router.get("*", (req, res) => {
-  res.status(404).send('no routing');
-});
 
 module.exports = router;

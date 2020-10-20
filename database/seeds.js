@@ -54,9 +54,11 @@ let scoreSeeds = [
       numberMeasures: 2,
       song: [
         {time: "0:0:3", note: "G3"},
-        {time: "0:1:0", note: "G3"},
         {time: "0:1:1", note: "G3"},
-        {time: "1:0:0", note: "F#3"}
+        {time: "0:1:3", note: "G3"},
+        {time: "1:0:1", note: "D#3"},
+        {time: "1:0:2", note: "D#3"},
+        {time: "1:0:3", note: "D#3"}
       ]
     }
 ];
