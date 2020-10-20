@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 let scoreSeeds = [
     {
-        name: "Happy Birthday",
+        name: "Josh's Song",
         beatsPerBar: 3,
         beatUnit: 4,
         numberMeasures: 9,
@@ -46,6 +46,18 @@ let scoreSeeds = [
             {time: "7:2", note: "G4"},
             {time: "8:0", note: "F4"}
         ]
+    },
+    {
+      name: "Famous Four Notes",
+      beatsPerBar: 2,
+      beatUnit: 4,
+      numberMeasures: 2,
+      song: [
+        {time: "0:0:3", note: "G3"},
+        {time: "0:1:0", note: "G3"},
+        {time: "0:1:1", note: "G3"},
+        {time: "1:0:0", note: "F#3"}
+      ]
     }
 ];
 

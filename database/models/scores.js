@@ -36,6 +36,12 @@ scoreSchema.virtual("totalMeasures").get(function() {
       // https://tonejs.github.io/
       return `${this.numberMeasures.toString()}m`
   });
+scoreSchema.virtual("songArray").get( function() {
+// "may" array of note objects to an array of note arrays
+    return this.song.map( note => {
+        return [note.time, note.note];
+    });    
+})
 
 const Score = mongoose.model("Score", scoreSchema);
 
