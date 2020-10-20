@@ -14,11 +14,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// routes
-app.use(require("./routes/api.js"));
-// Send every request to the React app
-// Define any API routes before this runs
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -31,7 +26,10 @@ mongoose.connect(process.env.MONGODB_URI, {
   useFindAndModify: false
 });
 
-
+// routes
+app.use(require("./routes/api.js"));
+// Send every request to the React app
+// Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
