@@ -17,10 +17,6 @@ app.use(express.json());
 // routes
 app.use(require("./routes/api.js"));
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 
 mongoose.connect(process.env.MONGODB_URI, {
